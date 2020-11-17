@@ -6,5 +6,6 @@ ADD   https://www.free-css.com/assets/files/free-css-templates/download/page258/
 WORKDIR /var/www/html
 RUN unzip sentra.zip
 RUN cp -rvf templatemo_518_sentra/* .
+RUN rm -rf sentra.zip  templatemo_518_sentra
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
 EXPOSE 80
